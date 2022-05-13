@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "title": "UserGame API Documentation"
   },
-  "host": "challenge-chapter-6.herokuapp.com",
+  "host": "binar-challenge-chapter-6.herokuapp.com",
   "basePath": "/api",
   "tags": [
     {
