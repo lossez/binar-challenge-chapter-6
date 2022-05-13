@@ -10,9 +10,10 @@ module.exports = {
   test: {
     username: process.env.USERNAME_DEV,
     password: process.env.PASSWORD_DEV,
-    database: process.env.DATABASE_DEV,
+    database: process.env.DATABASE_TEST,
     host: process.env.HOST_DEV,
     dialect: process.env.DIALECT_DEV,
+    logging: false,
   },
   production: {
     use_env_variable: "DATABASE_URL",
