@@ -12,11 +12,15 @@ module.exports = {
      * }], {});
      */
     await queryInterface.bulkInsert(
-      "user_games",
+      "user_game_biodata",
       [
         {
-          username: "user1",
-          password: "123456",
+          user_id: 1,
+          first_name: "user1",
+          last_name: "user1",
+          email: "user1@email.com",
+          umur: "20",
+          gender: "male",
           created_at: new Date(),
           updated_at: new Date(),
         },
@@ -32,6 +36,6 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-    await queryInterface.bulkDelete("user_games", null, {});
+    await queryInterface.bulkDelete("user_game_biodata", null, {});
   },
 };
