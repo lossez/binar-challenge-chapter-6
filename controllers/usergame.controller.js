@@ -76,6 +76,27 @@ const getUserById = async (req, res) => {
 };
 
 const createUser = async (req, res) => {
+  if (req.body.username === "" || req.body.password === "") {
+    return res.status(422).json({
+      message: "username and password is required",
+    });
+  }
+  if (req.body.password.length < 6) {
+    return res.status(422).json({
+      message: "password must be at least 6 characters",
+    });
+  }
+  const exist = await user_game.findOne({
+    where: {
+      username: req.body.username,
+    },
+  });
+  if (exist) {
+    return res.status(422).json({
+      message: "username already exist",
+    });
+  }
+
   user_game
     .create({
       username: req.body.username,
