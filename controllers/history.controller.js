@@ -80,6 +80,30 @@ const getHistoryById = async (req, res) => {
 };
 
 const addHistory = async (req, res) => {
+  if (req.body.score === "") {
+    return res.status(400).json({
+      message: "score is required",
+    });
+  }
+
+  if (isNaN(req.body.score)) {
+    return res.status(400).json({
+      message: "score must be number",
+    });
+  }
+
+  if (req.body.user_id === "") {
+    return res.status(400).json({
+      message: "user_id is required",
+    });
+  }
+
+  if (isNaN(req.body.user_id)) {
+    return res.status(400).json({
+      message: "user_id must be number",
+    });
+  }
+
   user_game
     .findOne({
       where: {
