@@ -20,7 +20,7 @@
                   type="text"
                   class="form-control"
                   name="username"
-                  placeholder="admin"
+                  placeholder="username"
                   required
                 />
                 <label class="my-2">Password</label>
@@ -28,7 +28,7 @@
                   type="password"
                   class="form-control"
                   name="password"
-                  placeholder="admin"
+                  placeholder="password"
                   required
                 />
                 <div class="d-grid gap-2 mt-3 mb-4">
@@ -51,28 +51,48 @@
 
 <script>
   function loginHandler() {
-    console.log("loginHandler");
     const form = document.getElementById("form-login");
     const formData = new FormData(form);
-    const data = {};
-    formData.forEach((value, key) => {
-      data[key] = value;
-    });
-    console.log(data, "data");
-    fetch("/loginPost", {
+    const params = new URLSearchParams(formData);
+
+    fetch("/login", {
       method: "POST",
-      body: JSON.stringify(data),
+      body: params,
       headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
+        "Content-Type": "application/x-www-form-urlencoded",
       },
-    }).then((data) => {
-      console.log(data);
-      if (data.status === 200) {
-        window.location.href = "/view/usergame";
-      } else {
-        alert("login failed");
-      }
-    });
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        localStorage.setItem("token", data.token);
+        window.location.href = "/view/dashboard";
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    // const data = {};
+    // formData.forEach((value, key) => {
+    //   data[key] = value;
+    // });
+    // fetch("/login", {
+    //   method: "POST",
+    //   body: JSON.stringify(data),
+    //   headers: {
+    //     Accept: "application/json",
+    //     "Content-Type": "application/json",
+    //   },
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     if (data.status === 200) {
+    //       console.log(data.token);
+    //       // window.location.href = "/view/dashboard";
+    //     } else {
+    //       alert("login failed");
+    //     }
+    //   });
   }
 </script>

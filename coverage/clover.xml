@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1652500365658" clover="3.2.0">
-  <project timestamp="1652500365658" name="All files">
+<coverage generated="1652509797265" clover="3.2.0">
+  <project timestamp="1652509797265" name="All files">
     <metrics statements="899" coveredstatements="628" conditionals="60" coveredconditionals="51" methods="26" coveredmethods="16" elements="985" coveredelements="695" complexity="0" loc="899" ncloc="899" packages="5" files="18" classes="18"/>
-    <package name="chapter-66">
+    <package name="chapter-6">
       <metrics statements="43" coveredstatements="33" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="app.js" path="/home/rayha/BINAR/CHALLENGE/chapter-66/app.js">
+      <file name="app.js" path="/home/rayha/BINAR/CHALLENGE/chapter-6/app.js">
         <metrics statements="43" coveredstatements="33" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -51,9 +51,9 @@
         <line num="43" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="chapter-66.config">
+    <package name="chapter-6.config">
       <metrics statements="28" coveredstatements="28" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="config.js" path="/home/rayha/BINAR/CHALLENGE/chapter-66/config/config.js">
+      <file name="config.js" path="/home/rayha/BINAR/CHALLENGE/chapter-6/config/config.js">
         <metrics statements="28" coveredstatements="28" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -85,9 +85,9 @@
         <line num="28" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="chapter-66.controllers">
+    <package name="chapter-6.controllers">
       <metrics statements="623" coveredstatements="365" conditionals="48" coveredconditionals="41" methods="20" coveredmethods="10"/>
-      <file name="auth.controller.js" path="/home/rayha/BINAR/CHALLENGE/chapter-66/controllers/auth.controller.js">
+      <file name="auth.controller.js" path="/home/rayha/BINAR/CHALLENGE/chapter-6/controllers/auth.controller.js">
         <metrics statements="18" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -108,7 +108,7 @@
         <line num="17" count="0" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
       </file>
-      <file name="history.controller.js" path="/home/rayha/BINAR/CHALLENGE/chapter-66/controllers/history.controller.js">
+      <file name="history.controller.js" path="/home/rayha/BINAR/CHALLENGE/chapter-6/controllers/history.controller.js">
         <metrics statements="228" coveredstatements="172" conditionals="25" coveredconditionals="21" methods="5" coveredmethods="5"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -339,7 +339,7 @@
         <line num="227" count="1" type="stmt"/>
         <line num="228" count="1" type="stmt"/>
       </file>
-      <file name="history.view.controller.js" path="/home/rayha/BINAR/CHALLENGE/chapter-66/controllers/history.view.controller.js">
+      <file name="history.view.controller.js" path="/home/rayha/BINAR/CHALLENGE/chapter-6/controllers/history.view.controller.js">
         <metrics statements="89" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -431,7 +431,7 @@
         <line num="88" count="0" type="stmt"/>
         <line num="89" count="1" type="stmt"/>
       </file>
-      <file name="usergame.controller.js" path="/home/rayha/BINAR/CHALLENGE/chapter-66/controllers/usergame.controller.js">
+      <file name="usergame.controller.js" path="/home/rayha/BINAR/CHALLENGE/chapter-6/controllers/usergame.controller.js">
         <metrics statements="209" coveredstatements="163" conditionals="23" coveredconditionals="20" methods="5" coveredmethods="5"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -643,7 +643,7 @@
         <line num="208" count="1" type="stmt"/>
         <line num="209" count="1" type="stmt"/>
       </file>
-      <file name="usergame.view.controller.js" path="/home/rayha/BINAR/CHALLENGE/chapter-66/controllers/usergame.view.controller.js">
+      <file name="usergame.view.controller.js" path="/home/rayha/BINAR/CHALLENGE/chapter-6/controllers/usergame.view.controller.js">
         <metrics statements="79" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -726,9 +726,9 @@
         <line num="79" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="chapter-66.models">
+    <package name="chapter-6.models">
       <metrics statements="135" coveredstatements="134" conditionals="12" coveredconditionals="10" methods="6" coveredmethods="6"/>
-      <file name="index.js" path="/home/rayha/BINAR/CHALLENGE/chapter-66/models/index.js">
+      <file name="index.js" path="/home/rayha/BINAR/CHALLENGE/chapter-6/models/index.js">
         <metrics statements="46" coveredstatements="45" conditionals="6" coveredconditionals="4" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -777,7 +777,7 @@
         <line num="45" count="1" type="stmt"/>
         <line num="46" count="1" type="stmt"/>
       </file>
-      <file name="user_game.js" path="/home/rayha/BINAR/CHALLENGE/chapter-66/models/user_game.js">
+      <file name="user_game.js" path="/home/rayha/BINAR/CHALLENGE/chapter-6/models/user_game.js">
         <metrics statements="28" coveredstatements="28" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -808,7 +808,7 @@
         <line num="27" count="2" type="stmt"/>
         <line num="28" count="2" type="stmt"/>
       </file>
-      <file name="user_game_biodata.js" path="/home/rayha/BINAR/CHALLENGE/chapter-66/models/user_game_biodata.js">
+      <file name="user_game_biodata.js" path="/home/rayha/BINAR/CHALLENGE/chapter-6/models/user_game_biodata.js">
         <metrics statements="32" coveredstatements="32" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -843,7 +843,7 @@
         <line num="31" count="2" type="stmt"/>
         <line num="32" count="2" type="stmt"/>
       </file>
-      <file name="user_game_history.js" path="/home/rayha/BINAR/CHALLENGE/chapter-66/models/user_game_history.js">
+      <file name="user_game_history.js" path="/home/rayha/BINAR/CHALLENGE/chapter-6/models/user_game_history.js">
         <metrics statements="29" coveredstatements="29" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -876,9 +876,9 @@
         <line num="29" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="chapter-66.routes">
+    <package name="chapter-6.routes">
       <metrics statements="70" coveredstatements="68" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="auth.js" path="/home/rayha/BINAR/CHALLENGE/chapter-66/routes/auth.js">
+      <file name="auth.js" path="/home/rayha/BINAR/CHALLENGE/chapter-6/routes/auth.js">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -887,7 +887,7 @@
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
       </file>
-      <file name="history.js" path="/home/rayha/BINAR/CHALLENGE/chapter-66/routes/history.js">
+      <file name="history.js" path="/home/rayha/BINAR/CHALLENGE/chapter-6/routes/history.js">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -900,7 +900,7 @@
         <line num="9" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
       </file>
-      <file name="history.view.js" path="/home/rayha/BINAR/CHALLENGE/chapter-66/routes/history.view.js">
+      <file name="history.view.js" path="/home/rayha/BINAR/CHALLENGE/chapter-6/routes/history.view.js">
         <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -912,7 +912,7 @@
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
       </file>
-      <file name="home.js" path="/home/rayha/BINAR/CHALLENGE/chapter-66/routes/home.js">
+      <file name="home.js" path="/home/rayha/BINAR/CHALLENGE/chapter-6/routes/home.js">
         <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -921,7 +921,7 @@
         <line num="5" count="0" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
       </file>
-      <file name="index.js" path="/home/rayha/BINAR/CHALLENGE/chapter-66/routes/index.js">
+      <file name="index.js" path="/home/rayha/BINAR/CHALLENGE/chapter-6/routes/index.js">
         <metrics statements="20" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -944,7 +944,7 @@
         <line num="19" count="1" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
       </file>
-      <file name="usergame.js" path="/home/rayha/BINAR/CHALLENGE/chapter-66/routes/usergame.js">
+      <file name="usergame.js" path="/home/rayha/BINAR/CHALLENGE/chapter-6/routes/usergame.js">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -957,7 +957,7 @@
         <line num="9" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
       </file>
-      <file name="usergame.view.js" path="/home/rayha/BINAR/CHALLENGE/chapter-66/routes/usergame.view.js">
+      <file name="usergame.view.js" path="/home/rayha/BINAR/CHALLENGE/chapter-6/routes/usergame.view.js">
         <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
