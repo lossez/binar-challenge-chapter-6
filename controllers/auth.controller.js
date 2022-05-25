@@ -1,18 +1,40 @@
+const { user_game } = require("../models");
+// const passport = require("../lib/passport");
+
 module.exports = {
-  login: function (req, res) {
-    res.render("auth/login");
-  },
-  loginPost: function (req, res) {
-    const { username, password } = req.body;
-    console.log("dari controllers", username, password);
-    if (username === "admin" && password === "admin") {
-      res.status(200).json({
-        message: "Login success",
+  login: async (req, res) => {
+    try {
+      const { username, password } = req.body;
+      const user = await user_game.findOne({
+        where: {
+          username,
+        },
       });
-    } else {
-      res.status(401).json({
-        message: "Login failed",
+      if (!user) {
+        return res.status(400).json({
+          message: "Username is not registered",
+        });
+      }
+      if (!user.validPassword(password)) {
+        return res.status(400).json({
+          message: "Password is incorrect",
+        });
+      }
+      const token = user.generateToken();
+      return res.status(200).json({
+        message: "Login success",
+        token,
+      });
+    } catch (err) {
+      return res.status(400).json({
+        message: err.message,
       });
     }
   },
+
+  // login: passport.authenticate("local", {
+  //   successRedirect: "/view/dashboard",
+  //   failureRedirect: "/login",
+  //   failureFlash: true,
+  // }),
 };

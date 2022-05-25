@@ -15,7 +15,7 @@ module.exports = {
       "user_game_biodata",
       [
         {
-          user_id: 1,
+          user_id: 2,
           first_name: "user1",
           last_name: "user1",
           email: "user1@email.com",
