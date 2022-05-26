@@ -48,11 +48,20 @@
                         href="/view/history/<%= item.id %>"
                         >Details</a
                       >
+                      <% if(user.role_id === 1) { %>
+
                       <a
                         class="btn btn-outline-warning"
                         href="/view/history/<%= item.id %>/edit"
                         >Edit</a
                       >
+                      <% }else { %>
+                      <a
+                        class="btn btn-outline-warning"
+                        href="/view/user-history/<%= user.id %>/edit/<%= item.id %>/"
+                        >Edit</a
+                      >
+                      <% } %>
 
                       <button
                         onclick="deleteUser('<%= item.id %>')"
@@ -78,6 +87,9 @@
     if (confirm("Are you sure?")) {
       fetch("/api/history/" + id, {
         method: "DELETE",
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("token"),
+        },
       }).then((res) => {
         if (res.status === 200) {
           window.location.reload();

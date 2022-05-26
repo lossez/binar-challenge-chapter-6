@@ -4,6 +4,8 @@ const {
   user_game_history,
 } = require("../models");
 
+const bcrypt = require("bcryptjs");
+
 const getAllUser = async (req, res) => {
   user_game
     .findAll({
@@ -15,6 +17,9 @@ const getAllUser = async (req, res) => {
           attributes: ["user_id", "first_name", "last_name", "email", "umur"],
         },
       ],
+      where: {
+        role_id: 2,
+      },
     })
     .then((result) => {
       if (result.length < 1) {
@@ -100,7 +105,8 @@ const createUser = async (req, res) => {
   user_game
     .create({
       username: req.body.username,
-      password: req.body.password,
+      password: bcrypt.hashSync(req.body.password, 10),
+      role_id: 2,
     })
     .then((result) => {
       return user_game_biodata
@@ -116,7 +122,7 @@ const createUser = async (req, res) => {
         .then((result) => {
           res.status(201).json({
             message: "user sucessfully created",
-            data: result,
+            // data: result,
           });
         })
         .catch((err) => {

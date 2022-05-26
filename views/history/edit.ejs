@@ -18,6 +18,7 @@
 
               <form id="form-edit">
                 <div class="mb-3 row">
+                  <input type="hidden" name="id" value="<%=  result.id %>" />
                   <label class="col-sm-2 col-form-label">Score</label>
                   <div class="col-sm-10">
                     <input
@@ -30,6 +31,7 @@
                     />
                   </div>
                 </div>
+                <% if (user.role_id === 1) { %>
                 <div class="mb-3 row">
                   <label class="col-sm-2 col-form-label">User ID</label>
                   <div class="col-sm-10">
@@ -43,6 +45,7 @@
                     />
                   </div>
                 </div>
+                <% } %>
                 <button
                   class="btn btn-outline-primary"
                   onclick="updateHistory(event)"
@@ -63,6 +66,8 @@
 
 <script>
   function updateHistory(e) {
+    const userId = "<%= user.id %>";
+    const roleId = "<%= user.role_id %>";
     e.preventDefault();
     const form = document.getElementById("form-edit");
     const formData = new FormData(form);
@@ -75,10 +80,15 @@
       body: JSON.stringify(data),
       headers: {
         "Content-Type": "application/json",
+        Authorization: "Bearer " + localStorage.getItem("token"),
       },
     }).then((res) => {
       if (res.status === 200) {
-        window.location.href = "/view/history";
+        if (roleId === 1) {
+          window.location.href = "/view/history";
+        } else {
+          window.location.href = "/view/user-history/" + userId;
+        }
       } else {
         alert("Gagal");
       }

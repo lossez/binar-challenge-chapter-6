@@ -14,9 +14,13 @@ module.exports = {
             as: "user_game_biodata",
           },
         ],
+        where: {
+          role_id: 2,
+        },
       })
       .then((result) => {
-        res.render("userGame/index", { result });
+        const user = req.user;
+        res.render("userGame/index", { result, user });
       })
       .catch((err) => {
         res.status(500).json({
@@ -43,7 +47,8 @@ module.exports = {
         ],
       })
       .then((result) => {
-        res.render("userGame/user_detail", { result });
+        const user = req.user;
+        res.render("userGame/user_detail", { result, user });
       })
       .catch((err) => {
         res.status(500).json({
@@ -53,7 +58,8 @@ module.exports = {
       });
   },
   new: (req, res) => {
-    res.render("userGame/new");
+    const user = req.user;
+    res.render("userGame/new", { user });
   },
 
   edit: (req, res) => {
@@ -67,7 +73,8 @@ module.exports = {
         ],
       })
       .then((result) => {
-        res.render("userGame/edit", { result });
+        const user = req.user;
+        res.render("userGame/edit", { result, user });
       })
       .catch((err) => {
         res.status(500).json({

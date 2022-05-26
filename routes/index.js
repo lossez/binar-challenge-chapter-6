@@ -3,6 +3,7 @@ const users = require("./usergame");
 const history = require("./history");
 
 const home = require("./home");
+const dashboard = require("./dashboard");
 const userView = require("./usergame.view");
 const historyView = require("./history.view");
 
@@ -16,5 +17,7 @@ router.use("/api/", history);
 
 router.use("/view/", userView);
 router.use("/view/", historyView);
+
+router.use(dashboard);
 
 module.exports = router;

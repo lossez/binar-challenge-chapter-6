@@ -3,10 +3,24 @@ const express = require("express");
 const path = require("path");
 const logger = require("morgan");
 const cors = require("cors");
-
+const passport = require("./lib/passport");
+const session = require("express-session");
+const flash = require("express-flash");
 const router = require("./routes/index");
 
 const app = express();
+app.use(
+  session({
+    secret: "inirahasiakaloakugantengbanget",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+
+app.use(flash());
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 const swaggerJSON = require("./swagger.json");
 const swaggerUI = require("swagger-ui-express");
