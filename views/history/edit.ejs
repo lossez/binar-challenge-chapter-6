@@ -84,11 +84,7 @@
       },
     }).then((res) => {
       if (res.status === 200) {
-        if (roleId === 1) {
-          window.location.href = "/view/history";
-        } else {
-          window.location.href = "/view/user-history/" + userId;
-        }
+        window.location.href = "/view/history";
       } else {
         alert("Gagal");
       }

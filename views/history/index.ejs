@@ -48,21 +48,11 @@
                         href="/view/history/<%= item.id %>"
                         >Details</a
                       >
-                      <% if(user.role_id === 1) { %>
-
                       <a
                         class="btn btn-outline-warning"
                         href="/view/history/<%= item.id %>/edit"
                         >Edit</a
                       >
-                      <% }else { %>
-                      <a
-                        class="btn btn-outline-warning"
-                        href="/view/user-history/<%= user.id %>/edit/<%= item.id %>/"
-                        >Edit</a
-                      >
-                      <% } %>
-
                       <button
                         onclick="deleteUser('<%= item.id %>')"
                         class="btn btn-outline-danger"

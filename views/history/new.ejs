@@ -91,11 +91,7 @@
       },
     }).then((res) => {
       if (res.status === 201) {
-        if (parseInt(role_id) === 2) {
-          window.location.href = "/view/user-history/<%= user.id %>";
-        } else {
-          window.location.href = "/view/history";
-        }
+        window.location.href = "/view/history";
       } else {
         alert("Gagal");
       }

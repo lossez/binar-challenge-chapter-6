@@ -1,3 +1,4 @@
+const { user_game_history } = require("../models");
 module.exports = {
   auth(req, res, next) {
     if (req.isAuthenticated()) {
@@ -21,10 +22,27 @@ module.exports = {
   },
 
   isCurrentUserOrAdmin(req, res, next) {
-    if (req.user.id === req.session.passport.user || req.user.role_id === 1) {
+    if (req.query.user_id == req.user.id || req.user.role_id == 1) {
       next();
     } else {
-      res.redirect("/view/dashboard");
+      res.send("cant aceess");
     }
+  },
+  isHistoryOwner(req, res, next) {
+    user_game_history
+      .findByPk(req.params.id)
+      .then((result) => {
+        if (result.user_id == req.user.id) {
+          next();
+        } else {
+          res.redirect("/view/dashboard");
+        }
+      })
+      .catch((err) => {
+        res.status(500).json({
+          message: "Error",
+          data: err,
+        });
+      });
   },
 };
